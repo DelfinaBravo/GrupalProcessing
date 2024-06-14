@@ -1,5 +1,4 @@
 let imagenFondo; // Variable para almacenar la imagen de fondo
-let boton;
 let logo;
 let mostrarLogo = true;
 let valorDesvanecer = 0;
@@ -10,10 +9,8 @@ let tiempoInicioDesvanecer;
 
 function setup() {
   createCanvas(1366, 768);
-  imagenFondo = loadImage('fondo.jpg');
+  imagenFondo = loadImage('fondo.png');
   logo = loadImage('logo.png');
-  boton = createButton('ENTRAR AL JUEGO');
-  configurarBoton();
 }
 
 function draw() {
@@ -24,7 +21,10 @@ function draw() {
 
   manejarEfectoDesvanecer();
 }
-
+//Llama al id del boton , y cuando se de click empieza a andar la funcion "entrar".
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('btniniciar').addEventListener('click', entrar);
+});
 function configurarBoton(){
   boton.position(555, 500);
   boton.size(300, 100);
@@ -34,7 +34,6 @@ function configurarBoton(){
 }
 
 function entrar(){
-  boton.hide(); // Oculta el botón
   mostrarLogo = false; // Oculta el logo
   iniciarEfectoDesvanecer();
 }
