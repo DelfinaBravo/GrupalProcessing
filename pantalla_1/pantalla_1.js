@@ -4,8 +4,8 @@ let personaje;
 let img; // Declarar variable 'img'.
 function setup() {
   createCanvas(1366, 768);
-  img = loadImage('fondop1.jpeg');
-  personaje = loadImage('moises.gif');
+  img = loadImage('../imagenes/imgp1/fondop1.jpeg');
+  personaje = loadImage('../imagenes/imgp1/moises.gif');
 }
 function draw() {
   background(0); // Establecer color de fondo
