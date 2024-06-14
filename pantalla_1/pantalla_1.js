@@ -1,11 +1,12 @@
 let personaje;
 let fondo;
 let boton;
+
 function setup() {
   createCanvas(1366, 768);
   fondo = loadImage('../imagenes/imgp1/fondop1.jpeg');
   personaje = loadImage('../imagenes/imgp1/moises.gif');
- 
+  sound = loadSound('../media/noseinundamas.mp3');
 }
 
 function draw() {
@@ -26,9 +27,10 @@ function configurarBoton(boton,x,y,url){
   boton.style('border', '3px solid black');
   boton.style('font-size', '20px');
   boton.style('background','yellow');
-
+  
   boton.mousePressed(() => {
     window.location.href = url;
+    
   });
 }
 
