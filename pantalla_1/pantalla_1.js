@@ -14,7 +14,7 @@ function draw() {
   pantalla1();
   //Creación de los botones 
   boton1 = createButton('OPCION 1');   
-  configurarBoton(boton1,210,60,'');
+  configurarBoton(boton1,210,60,'../opcion1/index.html');
   boton2 = createButton('OPCION 2');
   configurarBoton(boton2,600,60,'');
   boton3 = createButton('OPCION 3');
