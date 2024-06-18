@@ -33,6 +33,6 @@ function BotonAudio() {
   // Retrasar la redirección para asegurar que el audio comienza a reproducirse
   // setTimeout es una función de JavaScript que ejecuta una función después de un retraso
   // especificado en milisegundos.
-  setTimeout(()=>{window.location.href = '../pantalla_1/index.html';},1000); // 1 segundo de retraso
+  setTimeout(()=>{window.location.href = '../pantalla_1/index.html';},500); 
 }
 
