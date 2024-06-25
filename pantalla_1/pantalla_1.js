@@ -13,11 +13,11 @@ function draw() {
   background(fondo); 
   pantalla1();
   //Creación de los botones 
-  boton1 = createButton('OPCION 1');   
+  boton1 = createButton('LEVANTAR VARA');   
   configurarBoton(boton1,210,60,'../opcion1/index.html');
-  boton2 = createButton('OPCION 2');
+  boton2 = createButton('GOLPEAR VARA');
   configurarBoton(boton2,600,60,'');
-  boton3 = createButton('OPCION 3');
+  boton3 = createButton('SOSTENER VARA');
   configurarBoton(boton3,990,60,'../opcion3/index.html');
 }
 
