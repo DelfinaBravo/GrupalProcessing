@@ -5,13 +5,14 @@ let fondop; // Declarar variable 'img'.
 function setup() {
   createCanvas(1366, 768);
   fondop = loadImage('../mediaBravoDelfina/cielo.jpeg');
-  personaje = loadImage('');
+  personaje = loadImage('../imagenes/imgp1/moises.gif');
 }
 function draw() {
   background(0); // Establecer color de fondo
   // Muestra la imagen en su tamaño original en la posición (0,0)
+  sube();
   image(fondop, 0, 0);
-    pantalla3();
+  pantalla3();
 }
 function pantalla3(){
   // Definir el texto que quieres mostrar
@@ -41,7 +42,4 @@ function pantalla3(){
   // Color del texto
   fill(1);
   text(texto,cuadroX,cuadroY,cuadroAncho,cuadroAlto); // Posición y tamaño del texto dentro del cuadro
-}
-function personaje{
-  
 }
