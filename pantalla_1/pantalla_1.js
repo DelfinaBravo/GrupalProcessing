@@ -1,23 +1,23 @@
 let personaje;
 let fondo;
 let boton;
-
+let audio;
 function setup() {
   createCanvas(1366, 768);
   fondo = loadImage('../imagenes/imgp1/fondop1.jpeg');
   personaje = loadImage('../imagenes/imgp1/moises.gif');
-  sound = loadSound('../media/noseinundamas.mp3');
+  audio = createAudio('../media/botonaudio.mp3');
 }
 
 function draw() {
   background(fondo); 
   pantalla1();
   //Creación de los botones 
-  boton1 = createButton('OPCION 1');   
-  configurarBoton(boton1,210,60,'');
-  boton2 = createButton('OPCION 2');
+  boton1 = createButton('LEVANTAR VARA');   
+  configurarBoton(boton1,210,60,'../opcion1/index.html');
+  boton2 = createButton('GOLPEAR VARA');
   configurarBoton(boton2,600,60,'');
-  boton3 = createButton('OPCION 3');
+  boton3 = createButton('SOSTENER VARA');
   configurarBoton(boton3,990,60,'../opcion3/index.html');
 }
 
@@ -29,9 +29,14 @@ function configurarBoton(boton,x,y,url){
   boton.style('background','yellow');
   
   boton.mousePressed(() => {
-    window.location.href = url;
-    
+    audio.play();
+    if (url) {
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500); 
+    }
   });
+
 }
 
 function pantalla1(){

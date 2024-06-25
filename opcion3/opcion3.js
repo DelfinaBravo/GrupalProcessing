@@ -1,21 +1,19 @@
 let fondo = 0;
 let personaje;
 let fondop; // Declarar variable 'img'.
+
 function setup() {
   createCanvas(1366, 768);
-  fondop = loadImage('../imagenes/imgo3/f2.jpeg');
-  personaje = loadImage('../imagenes/imgo3/moises.gif');
+  fondop = loadImage('../mediaBravoDelfina/cielo.jpeg');
+  personaje = loadImage('');
 }
-
-
 function draw() {
   background(0); // Establecer color de fondo
   // Muestra la imagen en su tamaño original en la posición (0,0)
-  image(fondop, 160, 0);
-    pantalla1();
+  image(fondop, 0, 0);
+    pantalla3();
 }
-
-function pantalla1(){
+function pantalla3(){
   // Definir el texto que quieres mostrar
   // Mostrar la imagen del personaje con un tamaño diferente
   let nuevoAncho = 700; // Nuevo ancho deseado para la imagen (en píxeles)
@@ -28,7 +26,6 @@ function pantalla1(){
   // Obtener dimensiones del texto
   let textoAncho = textWidth(texto);
   let textoAlto = textAscent() + textDescent();
-
   // Definir posición y del cuadro de texto
   //horizontal
   let cuadroX = 250;
@@ -45,4 +42,6 @@ function pantalla1(){
   fill(1);
   text(texto,cuadroX,cuadroY,cuadroAncho,cuadroAlto); // Posición y tamaño del texto dentro del cuadro
 }
-
+function personaje{
+  
+}
