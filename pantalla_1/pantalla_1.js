@@ -1,11 +1,11 @@
-let personaje;
+let moises;
 let fondo;
 let boton;
 let audio;
 function setup() {
   createCanvas(1366, 768);
-  fondo = loadImage('../imagenes/imgp1/fondop1.jpeg');
-  personaje = loadImage('../imagenes/imgp1/moises.gif');
+  fondo = loadImage('../Media_ChavezFernanda/Mar_Fondo.jpg');
+  moises = loadImage('../Media_ChavezFernanda/moisesvara.png');
   audio = createAudio('../media/botonaudio.mp3');
 }
 
@@ -45,7 +45,7 @@ function pantalla1(){
   let nuevoAncho = 700; // Nuevo ancho deseado para la imagen (en píxeles)
   let nuevoAlto = 900; // Nuevo alto deseado para la imagen (en píxeles)
   
-  image(personaje, 90, 120, nuevoAncho, nuevoAlto);
+  image(moises, 90, 120, nuevoAncho, nuevoAlto);
   let texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   // Establecer propiedades del texto
   textSize(15.4); // Tamaño de la fuente
