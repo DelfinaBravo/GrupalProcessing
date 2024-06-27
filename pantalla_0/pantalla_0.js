@@ -7,7 +7,7 @@ function setup() {
   createCanvas(1366, 768);
   imagenFondo = loadImage('../imagenes/imgp0/fondo.png');
   logo = loadImage('../imagenes/imgp0/logo.png');
-  audio = createAudio('../media/botonaudio.mp3');
+  audio = createAudio('../audio/botonaudio.mp3');
   
   // Crear y configurar el botón una vez
   boton = createButton('INICIAR JUEGO');

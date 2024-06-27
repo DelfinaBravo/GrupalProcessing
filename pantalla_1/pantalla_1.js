@@ -6,7 +6,7 @@ function setup() {
   createCanvas(1366, 768);
   fondo = loadImage('../Media_ChavezFernanda/Mar_Fondo.jpg');
   moises = loadImage('../Media_ChavezFernanda/moisesvara.png');
-  audio = createAudio('../media/botonaudio.mp3');
+  audio = createAudio('../audio/botonaudio.mp3');
 }
 
 function draw() {
