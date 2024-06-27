@@ -5,14 +5,14 @@ let moises;
 let pulgar;
 let audio;
 let personajedesaparece = false;
-
+let audioReproducido = false; // Bandera para controlar la reproducción del audio
 let y = 768; // Variable global para la posición vertical de Moisés
 
 function preload() {
   fondop = loadImage('../mediaBravoDelfina/cielo.jpeg');
   personaje = loadImage('../Media_ChavezFernanda/moisesvara.png');
   pulgar = loadImage('../Media_ChavezFernanda/pulgar abajo.gif');
-  audio = loadSound('..audiojuanmattia/escena3.mp3');
+  audio = createAudio('../audiojuanmattia/escena3.mp3');
 }
 
 function setup() {
@@ -24,10 +24,8 @@ function setup() {
 
 function draw() {
   background(0);
-
   // Dibuja la imagen de fondo
   image(fondop, 0, 0);
-
   // Dibuja el cuadro de texto
   let texto = "Moisés proclamó: He cumplido mi deber según la voluntad de Dios. Ahora dejó este mundo en paz. Ante esto, el pueblo exclamó con angustia: ¡Moisés ha muerto! ¿Qué será de nosotros ahora? En ese momento, una voz del cielo los reconfortó: No temas, pueblo mío. Mi amor y protección siempre estarán con vosotros. El pueblo respondió con fervor: ¡Creemos en ti, oh Señor! Te seguiremos todos los días de nuestras vidas. Mientras tanto, el Faraón, impactado por los acontecimientos, admitió: ¡Mi poder ha sido desafiado por un Dios más grande! Debo reconsiderar mis acciones.' Finalmente, el pueblo declaró con convicción: '¡La fe en Dios nos ha liberado y nos guiará hacia el futuro!";
   let cuadroX = 280;
@@ -40,25 +38,22 @@ function draw() {
   rect(cuadroX, cuadroY, cuadroAncho, cuadroAlto);
   fill(1);
   text(texto, cuadroX + 10, cuadroY + 20, cuadroAncho - 20, cuadroAlto - 40);
-
-  
 }
 
 function sube() {
   if (y >= -personaje.height) {
     image(personaje, 320, y - 120);
     y -= 1;
+    audio.play();
   } else {
     personajedesaparece = true;
+    audio.stop();
   }
-
- 
    // Si personajedesaparece es true, mostrar "final malo"
    if (personajedesaparece) {
     // Nuevo canvas para "final malo"
     let finalCanvas = createCanvas(300, 300); // Aumento el tamaño del canvas
     finalCanvas.position(500, 300); // Posición del nuevo canvas
-  
     // Dibuja el gif del pulgar hacia arriba más grande
     let pulgarSize = 300; // Tamaño aumentado del pulgar
     image(pulgar, 40, -50, pulgarSize, pulgarSize);
@@ -69,4 +64,3 @@ function sube() {
     text("Final malo", 200, 270); // Ajuste de la posición del texto
   }
 }
-
