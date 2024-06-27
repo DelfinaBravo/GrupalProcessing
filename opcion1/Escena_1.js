@@ -8,7 +8,7 @@ let pulgar;
 let moisesDesaparecido = false; // Variable para rastrear si Moisés ha desaparecido
 let audioD;
 function preload() {
-  audioD= createAudio('../audio/multitudpersonas.mp3');
+  audioD= createAudio('../audio/titanic.mp3');
   moises = loadImage('../Media_ChavezFernanda/moisesvara.png');
   multitud = loadImage('../mediaBravoDelfina/multitud.png');
 }
@@ -34,9 +34,14 @@ function draw() {
 
 function Caminan(){
   if (y >= -moises.height) { // Dibuja la imagen solo si aún no ha salido de la pantalla
-    image(multitud, 150, y + 300); // Dibuja la imagen redimensionada de la multitud
-    image(moises, 150, y - 150); // Dibuja la imagen redimensionada de Moisés un poco más arriba de la multitud
-    y -= 1.8; // Mueve la imagen hacia arriba (decrementa y)
+    image(multitud, 250, y + 200); 
+    image(multitud, 450, y + 200); 
+    image(multitud, 250, y + 250); 
+    image(multitud, 450, y + 250); 
+    //
+    image(moises, 290, y - 130); 
+    
+    y -= 1; // Mueve la imagen hacia arriba (decrementa y)
     
   } else {
     fondo = marCerrado; // Cambia el fondo a marCerrado
@@ -48,7 +53,7 @@ function FinalBueno(){
   if (moisesDesaparecido) { // Si Moisés ha desaparecido, dibuja el gif del pulgar arriba
     image(pulgar, 350, 200); // Dibuja el gif del pulgar arriba en la posición deseada
     textSize(32); 
-    fill(0,255,255); 
+    fill(1); 
     textAlign(CENTER); 
     text("FINAL BUENO", 650 ,600); 
   
@@ -58,12 +63,12 @@ function FinalBueno(){
 }
 
 function TamañoImagenes(){
-  let newWidth = moises.width * 1.5; // Multiplica por 0.8 para hacer la imagen más pequeña
-  let newHeight = moises.height * 1.5; // Multiplica por 0.8 para hacer la imagen más pequeña
+  let newWidth = moises.width * 1.2; // Multiplica por 0.8 para hacer la imagen más pequeña
+  let newHeight = moises.height * 1.2; // Multiplica por 0.8 para hacer la imagen más pequeña
   moises.resize(newWidth, newHeight);
 
   // Redimensiona la imagen de la multitud manteniendo la proporción
-  let nuevoancho = multitud.width * 1.4; 
-  let nuevoalto = multitud.height * 1.4; // Multi
+  let nuevoancho = multitud.width * 1; 
+  let nuevoalto = multitud.height * 1; // Multi
   multitud.resize(nuevoancho, nuevoalto);
 }
