@@ -30,6 +30,7 @@ function configurarBoton(boton, x, y, url) {
   boton.style('background', '#FFEEA9');
   boton.mousePressed(() => {
     audio.play();
+    //verifica si "url" no esta vacia o tiene un valor null, si contiene ejecuta el if.
     if (url) {
       setTimeout(() => {
         window.location.href = url;

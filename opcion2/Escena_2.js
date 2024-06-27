@@ -56,7 +56,7 @@ function pantalla1(){
   let cuadroX = 500;
   //vertical
   let cuadroY = 590;
-  // ancho
+  // anchos
   let cuadroAncho = 300;
   //alto
   let cuadroAlto = 50;
