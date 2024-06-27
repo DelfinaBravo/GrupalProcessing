@@ -62,5 +62,6 @@ function sube() {
     textSize(40); // Aumento del tamaño del texto
     textAlign(CENTER);
     text("Final malo", 200, 270); // Ajuste de la posición del texto
+    setTimeout(()=>{window.location.href = '../pantalla_1/index.html';},3500);
   }
 }
