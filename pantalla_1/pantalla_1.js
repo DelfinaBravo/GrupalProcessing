@@ -17,7 +17,7 @@ function draw() {
   boton1 = createButton('LEVANTAR VARA');   
   configurarBoton(boton1,210,60,'../opcion1/index.html');
   boton2 = createButton('GOLPEAR VARA');
-  configurarBoton(boton2,600,60,'');
+  configurarBoton(boton2,600,60,'../opcion2/index.html');
   boton3 = createButton('SOSTENER VARA');
   configurarBoton(boton3,990,60,'../opcion3/index.html');
 }

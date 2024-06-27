@@ -58,12 +58,12 @@ function FinalBueno(){
 }
 
 function TamañoImagenes(){
-  let newWidth = moises.width * 1.6; // Multiplica por 0.8 para hacer la imagen más pequeña
-  let newHeight = moises.height * 1.6; // Multiplica por 0.8 para hacer la imagen más pequeña
+  let newWidth = moises.width * 1.5; // Multiplica por 0.8 para hacer la imagen más pequeña
+  let newHeight = moises.height * 1.5; // Multiplica por 0.8 para hacer la imagen más pequeña
   moises.resize(newWidth, newHeight);
 
   // Redimensiona la imagen de la multitud manteniendo la proporción
-  let nuevoancho = multitud.width * 1.5; 
-  let nuevoalto = multitud.height * 1.5; // Multi
+  let nuevoancho = multitud.width * 1.4; 
+  let nuevoalto = multitud.height * 1.4; // Multi
   multitud.resize(nuevoancho, nuevoalto);
 }
