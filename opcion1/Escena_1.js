@@ -49,6 +49,12 @@ function draw() {
 
   if (moisesDesaparecido) { // Si Moisés ha desaparecido, dibuja el gif del pulgar arriba
     image(pulgar, 350, 200); // Dibuja el gif del pulgar arriba en la posición deseada
+    textSize(32); // Tamaño del texto
+    fill(255); // Color del texto (blanco)
+    textAlign(CENTER); // Alinea el texto al centro
+    text("final bueno", 350 + pulgar.width / 2, 400 + 50); // Dibuja el texto debajo del 
+    //que despues de 3,5 segundos redireccione a "pantalla1".
+    setTimeout(()=>{window.location.href = '../pantalla_1/index.html';},3500); 
   }
 
 }
