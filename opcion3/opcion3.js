@@ -28,16 +28,17 @@ function draw() {
   image(fondop, 0, 0);
   // Dibuja el cuadro de texto
   let texto = "Moisés proclamó: He cumplido mi deber según la voluntad de Dios. Ahora dejó este mundo en paz. Ante esto, el pueblo exclamó con angustia: ¡Moisés ha muerto! ¿Qué será de nosotros ahora? En ese momento, una voz del cielo los reconfortó: No temas, pueblo mío. Mi amor y protección siempre estarán con vosotros. El pueblo respondió con fervor: ¡Creemos en ti, oh Señor! Te seguiremos todos los días de nuestras vidas. Mientras tanto, el Faraón, impactado por los acontecimientos, admitió: ¡Mi poder ha sido desafiado por un Dios más grande! Debo reconsiderar mis acciones.' Finalmente, el pueblo declaró con convicción: '¡La fe en Dios nos ha liberado y nos guiará hacia el futuro!";
-  let cuadroX = 280;
-  let cuadroY = 590;
+  let cuadroX = 180;
+  let cuadroY = 540;
   // Llama a la función para animar la subida de Moisés
   sube();
-  let cuadroAncho = 800; // Ajusta el ancho según sea necesario
-  let cuadroAlto = 100; // Ajusta el alto según sea necesario
+  textSize(18); // Tamaño de la fuente
+  let cuadroAncho = 1000; // Ajusta el ancho según sea necesario
+  let cuadroAlto = 145; // Ajusta el alto según sea necesario
   fill(255, 238, 169);
   rect(cuadroX, cuadroY, cuadroAncho, cuadroAlto);
   fill(1);
-  text(texto, cuadroX + 10, cuadroY + 20, cuadroAncho - 20, cuadroAlto - 40);
+  text(texto, cuadroX, cuadroY,cuadroAncho, cuadroAlto);
 }
 
 function sube() {

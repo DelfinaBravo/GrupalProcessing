@@ -22,21 +22,20 @@ function draw() {
   configurarBoton(boton3,990,60,'../opcion3/index.html');
 }
 
-function configurarBoton(boton,x,y,url){
+function configurarBoton(boton, x, y, url) {
   boton.position(x, y);
   boton.size(150, 90);
   boton.style('border', '3px solid black');
   boton.style('font-size', '20px');
-  boton.style('background','yellow');
+  boton.style('background', 'yellow');
   boton.mousePressed(() => {
     audio.play();
     if (url) {
       setTimeout(() => {
         window.location.href = url;
-      }, 500); 
+      }, 500);
     }
   });
-
 }
 
 function pantalla1(){
