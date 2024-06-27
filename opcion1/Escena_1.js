@@ -1,14 +1,15 @@
 let moises;
 let marAbierto;
 let multitud;
-let y; // posición vertical de la imagen
+let y; 
 let marCerrado;
 let fondo;
 let pulgar;
-let moisesDesaparecido = false; // Variable para rastrear si Moisés ha desaparecido
-let audioD;
+let MoisesDesa = false; 
+let audioF;
+
 function preload() {
-  audioD= createAudio('../audio/titanic.mp3');
+  audioF= createAudio('../audio/titanic.mp3');
   moises = loadImage('../Media_ChavezFernanda/moisesvara.png');
   multitud = loadImage('../mediaBravoDelfina/multitud.png');
 }
@@ -20,14 +21,14 @@ function setup() {
   pulgar = loadImage('../Media_ChavezFernanda/Pulgar_Arriba.gif');
 
   y = height; // Inicializa la posición y en la parte inferior del lienzo
-  fondo = marAbierto; // Inicializa el fondo con marAbierto
-
+  fondo = marAbierto; 
   TamañoImagenes()
 }
 
 function draw() {
   background(fondo);
-  audioD.play();
+  //El audio de fondo reproduciendose todo el tiempo.
+  audioF.play();
   Caminan();
   FinalBueno();
 }
@@ -38,20 +39,27 @@ function Caminan(){
     image(multitud, 450, y + 200); 
     image(multitud, 250, y + 250); 
     image(multitud, 450, y + 250); 
-    //
+    //SEPARADOR
     image(moises, 290, y - 130); 
     
-    y -= 1; // Mueve la imagen hacia arriba (decrementa y)
+    y -= 1; //decrementa la imagen haciendo que suba para arriba.
     
-  } else {
+  } 
+  else{
+    //Cambia el fondo a Marcerrado y Mo
     fondo = marCerrado; // Cambia el fondo a marCerrado
-    moisesDesaparecido = true; // Marca que Moisés ha desaparecido
+    MoisesDesa= true; // Marca que Moisés ha desaparecido
   } 
 }
 
 function FinalBueno(){
-  if (moisesDesaparecido) { // Si Moisés ha desaparecido, dibuja el gif del pulgar arriba
-    image(pulgar, 350, 200); // Dibuja el gif del pulgar arriba en la posición deseada
+   // Si Moisés ha desaparecido, dibuja el gif "PulgarArriba" y redirecciona a "Pantalla1"
+  if (MoisesDesa){
+
+    //imagen PulgarArriba
+    image(pulgar, 350, 200); 
+
+    //Texto "Final Bueno"
     textSize(32); 
     fill(1); 
     textAlign(CENTER); 
@@ -63,12 +71,14 @@ function FinalBueno(){
 }
 
 function TamañoImagenes(){
-  let newWidth = moises.width * 1.2; // Multiplica por 0.8 para hacer la imagen más pequeña
-  let newHeight = moises.height * 1.2; // Multiplica por 0.8 para hacer la imagen más pequeña
-  moises.resize(newWidth, newHeight);
 
-  // Redimensiona la imagen de la multitud manteniendo la proporción
-  let nuevoancho = multitud.width * 1; 
-  let nuevoalto = multitud.height * 1; // Multi
-  multitud.resize(nuevoancho, nuevoalto);
+  //Ancho y Alto de la imagen "Moises"
+  let MAncho = moises.width * 1.2; 
+  let MAlto = moises.height * 1.2;
+  moises.resize(MAncho,MAlto);
+
+  //Ancho y Alto de la imagenes "Multitud"
+  let MuAncho = multitud.width * 1; 
+  let MuAlto = multitud.height * 1; 
+  multitud.resize(MuAncho, MuAlto);
 }
