@@ -7,6 +7,7 @@ function setup() {
   fondo = loadImage('../Media_ChavezFernanda/Mar_Fondo.jpg');
   moises = loadImage('../Media_ChavezFernanda/moisesvara.png');
   audio = createAudio('../audio/botonaudio.mp3');
+  gente=loadImage('../mediaBravoDelfina/multitud.png')
 }
 
 function draw() {
@@ -27,7 +28,6 @@ function configurarBoton(boton,x,y,url){
   boton.style('border', '3px solid black');
   boton.style('font-size', '20px');
   boton.style('background','yellow');
-  
   boton.mousePressed(() => {
     audio.play();
     if (url) {
@@ -40,29 +40,33 @@ function configurarBoton(boton,x,y,url){
 }
 
 function pantalla1(){
-  // Definir el texto que quieres mostrar
-  // Mostrar la imagen del personaje con un tamaño diferente
   let nuevoAncho = 700; // Nuevo ancho deseado para la imagen (en píxeles)
   let nuevoAlto = 900; // Nuevo alto deseado para la imagen (en píxeles)
-  
   image(moises, 90, 120, nuevoAncho, nuevoAlto);
-  let texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  multitud();
+  let texto = "¡Bienvenido a 'Shalom Moisés'! te enfrentarás a decisiones cruciales que determinarán tu destino. Tres opciones se presentan ante ti: ¿levantar la vara con firmeza, sostenerla con sabiduría o usarla para golpear? Cada elección trae consigo consecuencias únicas que moldearán tu viaje a través de este emocionante mundo lleno de sorpresas y desafíos.";
   // Establecer propiedades del texto
-  textSize(15.4); // Tamaño de la fuente
-  textAlign(CENTER); // Alineación del texto
-  // Obtener dimensiones del texto
-  let textoAncho = textWidth(texto);
-  let textoAlto = textAscent() + textDescent();
-  // Definir posición y tamaño del cuadro de texto
-  let cuadroX = 235;
+  textSize(16); // Tamaño de la fuente
+  let cuadroX = 280;
   let cuadroY = 590;
-  let cuadroAncho = textoAncho - 1950;
-  let cuadroAlto = textoAlto + 100;
-  // Dibujar el cuadro
-  fill(255,238,169); // Color del cuadro
-  rect(cuadroX, cuadroY, cuadroAncho, cuadroAlto); // Dibujar el cuadro
-  // Color del texto
+  let cuadroAncho = 800; // Ajusta el ancho según sea necesario
+  let cuadroAlto = 118; // Ajusta el alto según sea necesario
+  fill(255, 238, 169);
+  rect(cuadroX, cuadroY, cuadroAncho, cuadroAlto);
   fill(1);
-  text(texto, cuadroX , cuadroY , cuadroAncho , cuadroAlto ); // Posición y tamaño del texto dentro del cuadro
+  text(texto, cuadroX + 10, cuadroY + 20, cuadroAncho - 20, cuadroAlto - 40);
+}
 
+function multitud(){
+  let Ancho = 1000; // Nuevo ancho deseado para la imagen (en píxeles)
+  let Alto = 900; // Nuevo alto deseado para la imagen (en píxeles)
+  image(gente, -700, 350, Ancho, Alto);
+  image(gente, -400, 350, Ancho, Alto);
+  image(gente, -100, 350, Ancho, Alto);
+  image(gente, 10, 350, Ancho, Alto);
+  image(gente, 90, 350, Ancho, Alto);
+  image(gente, 300, 350, Ancho, Alto);
+  image(gente, 500, 350, Ancho, Alto);
+  image(gente, 700, 350, Ancho, Alto);
+  image(gente, 900, 350, Ancho, Alto);
 }
