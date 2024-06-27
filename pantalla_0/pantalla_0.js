@@ -24,7 +24,7 @@ function configurarBoton() {
   boton.size(300, 100);
   boton.style('border', '3px solid black');
   boton.style('font-size', '32px');
-  boton.style('background', 'yellow');
+  boton.style('background', '#FFEEA9');
   boton.mousePressed(BotonAudio);
 }
 

@@ -27,7 +27,7 @@ function configurarBoton(boton, x, y, url) {
   boton.size(150, 90);
   boton.style('border', '3px solid black');
   boton.style('font-size', '20px');
-  boton.style('background', 'yellow');
+  boton.style('background', '#FFEEA9');
   boton.mousePressed(() => {
     audio.play();
     if (url) {
